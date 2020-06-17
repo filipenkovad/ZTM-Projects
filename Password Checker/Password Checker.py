@@ -30,7 +30,7 @@ def main(args):
 			print(f'{password} was pwned {count} times')
 		else:
 			print(f'{password} was NEVER pwned')
+	return('Done!')
 
-main(sys.argv[1:])
-
-print('All work done!')
+if __name__ == '__main__':
+	sys.exit(main(sys.argv[1:]))
