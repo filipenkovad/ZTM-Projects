@@ -32,3 +32,5 @@ def main(args):
 			print(f'{password} was NEVER pwned')
 
 main(sys.argv[1:])
+
+print('All work done!')
