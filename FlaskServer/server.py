@@ -1,14 +1,30 @@
-from flask import Flask, render_template, send_from_directory
+from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route('/')
-def hello_world():
+def my_page():
+	return render_template('index.html') 
+
+@app.route('/index.html')
+def my_page0():
 	return render_template('index.html') 
 
 @app.route('/about.html')
-def about():
+def my_page1():
 	return render_template('about.html') 
 
-@app.route('/favicon.ico')
-def favicon():
-	return send_from_directory('favicon.ico','favicon.ico', mimetype='image/vnd.microsoft.icon')
+@app.route('/contact.html')
+def my_page2():
+	return render_template('contact.html') 
+
+@app.route('/work.html')
+def my_page3():
+	return render_template('work.html') 
+
+@app.route('/works.html')
+def my_page4():
+	return render_template('works.html') 
+
+@app.route('/components.html')
+def my_page5():
+	return render_template('components.html') 
